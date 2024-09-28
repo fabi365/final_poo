@@ -1,0 +1,19 @@
+<!-- ventas/templates/ventas/registrar_venta.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Venta</title>
+</head>
+<body>
+    <h1>Registrar Venta</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrar</button>
+    </form>
+    <a href="{% url 'lista_ventas' %}">Volver a la lista de ventas</a>
+    <br>
+    <a href="{% url 'home' %}">Volver Al Inicio</a>
+    
+</body>
+</html>

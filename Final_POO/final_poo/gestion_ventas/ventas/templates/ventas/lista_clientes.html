@@ -1,0 +1,16 @@
+<!-- ventas/templates/ventas/lista_clientes.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.nombre }} - <a href="{% url 'editar_cliente' cliente.pk %}">Editar</a> - <a href="{% url 'eliminar_cliente' cliente.pk %}">Eliminar</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'registrar_cliente' %}">Registrar Nuevo Cliente
+        <br>
+        <a href="{% url 'home' %}">Volver Al Inicio</a>    

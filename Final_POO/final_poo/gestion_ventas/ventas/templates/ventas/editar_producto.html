@@ -1,0 +1,18 @@
+<!-- ventas/templates/ventas/editar_producto.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Producto</title>
+</head>
+<body>
+    <h1>Editar Producto</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Actualizar</button>
+    </form>
+    <a href="{% url 'lista_productos' %}">Volver a la lista de productos</a>
+    <br>
+    <a href="{% url 'home' %}">Volver Al Inicio</a>
+</body>
+</html>

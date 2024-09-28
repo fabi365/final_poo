@@ -1,0 +1,18 @@
+<!-- ventas/templates/ventas/eliminar_producto.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar Producto</title>
+</head>
+<body>
+    <h1>Eliminar Producto</h1>
+    <p>¿Estás seguro de que deseas eliminar el producto "{{ producto.nombre }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Eliminar</button>
+    </form>
+    <a href="{% url 'lista_productos' %}">Cancelar</a>
+    <br>
+    <a href="{% url 'home' %}">Volver Al Inicio</a>
+</body>
+</html>

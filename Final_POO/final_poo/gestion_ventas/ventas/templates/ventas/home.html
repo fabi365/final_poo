@@ -1,0 +1,17 @@
+<!-- ventas/templates/ventas/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido al Sistema de Gestión de Ventas</h1>
+    <ul>
+        <li><a href="{% url 'registrar_producto' %}">Registrar Producto</a></li>
+        <li><a href="{% url 'registrar_venta' %}">Registrar Venta</a></li>
+        <li><a href="{% url 'lista_productos' %}">Lista de Productos</a></li>
+        <li><a href="{% url 'lista_ventas' %}">Lista de Ventas</a></li>
+        <li><a href="{% url 'lista_clientes' %}">Lista de clientes</a></li>
+    </ul>
+</body>
+</html>
